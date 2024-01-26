@@ -1,9 +1,6 @@
 """
     IMPORTANT TO NOTE:
         This file was taken from the monitors file 'filesystem.py' written by [author].
-
-        The following code has been lightly edited and repurposed for the development 
-        of the FUVTDS monitor by Jaq Hernandez.
 """
 import os
 import numpy as np
@@ -79,10 +76,10 @@ class FileData(FileDataInterface):
         for ext, keys in table_request.items():
             for key in keys:
                 if key in self:
-                    self[f'{key}_{ext}'] = hdu[ext].data[key]
+                    self[f'{key}_{ext}'] = hdu[ext].data[key]#.flatten()
 
                 else:
-                    self[key] = hdu[ext].data[key]
+                    self[key] = hdu[ext].data[key]#.flatten()
 
     def combine(self, other, right_name):
         """Combine two FileData dictionaries into one."""

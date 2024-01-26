@@ -1,18 +1,4 @@
 
-"""
-This code will require the following to be manually changed:
-    - LP: The Lifetime Position we are currently looking at
-    - PID:  The program ids that correspond to said Lifetime Position
-    - output_dir: The directory where the files will be stored in
-
-Purpose of this code:
-    This code will copy the relevant files from COSMO that will later be recalibrated.
-    The asn and rawtag files are grabbed for each lifetime position and PID from COSMO and are
-copied to a pre-set directory that will store the files. The directory will be organized by
-Lifetime Position and then by PIDs.
-    Once copied, the files are then unzipped automatically and are ready for calibration.
-"""
-
 import os
 import glob
 
